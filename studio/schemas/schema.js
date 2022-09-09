@@ -5,6 +5,10 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 import news from "./news";
+import offer from "./offer";
+import events from "./events";
+import authorRecommendation from "./authorRecommendation";
+import bookRecommendation from "./bookRecommendation";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,5 +19,9 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     news,
+    offer,
+    events,
+    authorRecommendation,
+    bookRecommendation,
   ]),
 });
