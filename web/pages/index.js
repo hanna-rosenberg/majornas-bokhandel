@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.test}>
       <p>Hur ser det ut?</p>
     </div>
   );
