@@ -1,10 +1,9 @@
-import React from "react";
-import { urlFor } from "../../../studio/lib/client";
+import styles from "./Events.module.css";
 
-export default function Event({ event }) {
+export default function Events() {
   return (
-    <div>
-      <p>{event.name}</p>
-    </div>
+    <>
+      <p className={styles.test}>Events</p>
+    </>
   );
 }
