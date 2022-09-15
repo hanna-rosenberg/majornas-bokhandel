@@ -2,7 +2,8 @@ import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
 import FindUs from "../components/FindUs/FindUs";
 import Welcome from "../components/Welcome/Welcome";
-import Events from "../components/Events/Events";
+import NextEvent from "../components/NextEvent/NextEvent";
+import UpcomingEvents from "../components/UpcomingEvents/UpcomingEvents";
 import AboutEvents from "../components/AboutEvents/AboutEvents";
 import Footer from "../components/Footer/Footer";
 import Instagram from "../components/Instagram/Instagram";
@@ -17,7 +18,8 @@ export default function Home() {
       <Welcome />
       <NewsAndOffers />
       <AboutEvents />
-      <Events />
+      <NextEvent />
+      <UpcomingEvents />
       <FindUs />
       <AuthorOfTheMonth />
       <ReadingTips />
