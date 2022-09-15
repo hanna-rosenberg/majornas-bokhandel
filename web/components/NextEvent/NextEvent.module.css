@@ -1,0 +1,142 @@
+.container {
+  display: grid;
+  grid-template-columns: 207px 1fr 32px 1fr 207px;
+  grid-template-rows: 48px 378px;
+  gap: 3px;
+  padding: 0 3px 3px 3px;
+  background-color: #adb9ad;
+}
+
+.top {
+  background-color: white;
+  grid-column: 2 / 5;
+  grid-row: 1 / 2;
+}
+
+.left {
+  background-color: white;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  border-bottom: 3px solid white;
+  margin-bottom: -3px;
+}
+
+.right {
+  background-color: white;
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+}
+
+.infoContainer {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.middleDivider {
+  background-color: #eecd45;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.imgContainer {
+  background-color: white;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.mobileTopLeft {
+  display: none;
+}
+
+.mobileTopRight {
+  display: none;
+}
+
+.mobileRight {
+  display: none;
+}
+
+.mobileDividerRight {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 97px 1fr 18px 1fr 97px;
+    grid-template-rows: 22px 216px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 16px 1fr 1fr 16px;
+    grid-template-rows: 24px 152px 24px 204px;
+  }
+
+  .top {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .left {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .right {
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+  }
+
+  .infoContainer {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .middleDivider {
+    background-color: #eecd45;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .imgContainer {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+  }
+
+  .mobileTopLeft {
+    display: block;
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+
+  .mobileTopRight {
+    display: block;
+    background-color: #edba88;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .mobileRight {
+    display: block;
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+  }
+
+  .mobileDividerRight {
+    display: block;
+    background-color: white;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+}
