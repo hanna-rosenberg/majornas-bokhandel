@@ -6,9 +6,9 @@ export default function Welcome() {
       <div className={styles.marginTopLeft}></div>
       <div className={styles.marginMiddleLeft}></div>
       <div className={styles.marginBottomLeft}></div>
-      <div className={styles.empty}></div>
-      <div className={styles.empty}></div>
-      <div className={styles.empty}></div>
+      <div className={styles.headerContainer}></div>
+      <div className={styles.heroImgContainer}></div>
+      <div className={styles.infoTextContainer}></div>
       <div className={styles.marginTopRight}></div>
       <div className={styles.marginMiddleRight}></div>
       <div className={styles.marginBottomRight}></div>

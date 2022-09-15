@@ -25,6 +25,24 @@
   grid-row: 3 / 4;
 }
 
+.headerContainer {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.heroImgContainer {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.infoTextContainer {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
 .marginTopRight {
   background-color: #3f3f3f;
   grid-column: 3 / 4;
