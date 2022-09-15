@@ -23,6 +23,10 @@ h1 {
   margin: 0;
 }
 
+h3 {
+  font-family: TypewriterBold;
+  font-size: 24px;
+}
 p {
   font-family: SourceSerif;
   font-size: 18px;
@@ -45,3 +49,31 @@ a {
     background: black;
   }
 } */
+
+@media only screen and (max-width: 840px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

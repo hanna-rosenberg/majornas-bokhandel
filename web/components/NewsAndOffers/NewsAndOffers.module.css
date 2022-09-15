@@ -71,10 +71,42 @@
   display: none;
 }
 
+/* NOT GRID */
+.news,
+.offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+
+.news h3,
+.offers h3 {
+  margin: 0;
+  padding-top: 3.5rem;
+}
+
+.news p,
+.offers p {
+  padding: 0.5rem 5% 0 5%;
+  margin: 0;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 18px 1fr 97px;
     grid-template-rows: 22px 125px;
+  }
+
+  .news,
+  .offers {
+    padding-top: 0;
+  }
+
+  .news h3,
+  .offers h3 {
+    padding-top: 1rem;
   }
 }
 
