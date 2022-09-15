@@ -101,7 +101,6 @@
   .headerContainerContent p {
     margin: 0;
     padding: 0 10% 0 10%;
-    font-size: 14px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -112,20 +111,11 @@
   .desktopLinksContainer {
     display: none;
   }
-
-  .infoTextContainer h1 {
-    font-size: 24px;
-  }
-
-  .infoTextContainer p {
-    font-size: 14px;
-  }
 }
 
 @media only screen and (max-width: 840px) {
   .infoTextContainer p {
     padding: 0.5rem 5% 0 5%;
-    font-size: 12px;
     margin-top: unset;
   }
 }
@@ -140,10 +130,6 @@
   .headerContainerContent p {
     margin: 0;
     padding: 0 5% 0 5%;
-    font-size: 12px;
-  }
-  .infoTextContainer h1 {
-    font-size: 18px;
   }
 }
 

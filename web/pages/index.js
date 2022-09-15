@@ -10,13 +10,18 @@ import Instagram from "../components/Instagram/Instagram";
 import ReadingTips from "../components/ReadingTips/ReadingTips";
 import NewsAndOffers from "../components/NewsAndOffers/NewsAndOffers";
 import AuthorOfTheMonth from "../components/AuthorOfTheMonth/AuthorOfTheMonth";
+import { client } from "../../studio/lib/client";
 
-export default function Home() {
+export default function Home({ newsData, offerData }) {
   return (
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers />
+      <NewsAndOffers
+        news={newsData[0].news}
+        offer={offerData[0].offer}
+      ></NewsAndOffers>
+
       <AboutEvents />
       <NextEvent />
       <UpcomingEvents />
@@ -28,3 +33,14 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "news"]';
+  const newsData = await client.fetch(query);
+  const offerQuery = '*[_type == "offer"]';
+  const offerData = await client.fetch(offerQuery);
+
+  return {
+    props: { newsData, offerData },
+  };
+};
