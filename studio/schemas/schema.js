@@ -9,6 +9,7 @@ import offer from "./offer";
 import events from "./events";
 import authorRecommendation from "./authorRecommendation";
 import bookRecommendation from "./bookRecommendation";
+import findUs from "./findUs";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,5 +24,6 @@ export default createSchema({
     events,
     authorRecommendation,
     bookRecommendation,
+    findUs,
   ]),
 });
