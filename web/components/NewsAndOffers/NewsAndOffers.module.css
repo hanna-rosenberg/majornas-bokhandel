@@ -79,6 +79,7 @@
   justify-content: start;
   align-items: center;
   text-align: center;
+  background: url(../../assets/texture.png);
 }
 
 .news h3,

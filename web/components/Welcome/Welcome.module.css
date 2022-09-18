@@ -63,6 +63,13 @@
 
 /* NOT GRID  */
 
+.headerContainer {
+  background: url(../../assets/texture.png);
+}
+.infoTextContainer {
+  background: url(../../assets/texture.png);
+}
+
 .headerContainerContent {
   display: flex;
   justify-content: center;
