@@ -17,10 +17,7 @@ export default function Home({ newsData, offerData }) {
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers
-        news={newsData[0].news}
-        offer={offerData[0].offer}
-      ></NewsAndOffers>
+      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
 
       <AboutEvents />
       <NextEvent />
