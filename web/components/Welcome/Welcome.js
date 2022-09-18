@@ -19,7 +19,12 @@ export default function Welcome() {
       </div>
 
       <div className={styles.heroImgContainer}>
-        <Image src={HeaderImage} className={styles.heroImgContent}></Image>
+        <Image
+          src={HeaderImage}
+          className={styles.heroImg}
+          objectFit="cover"
+          layout="fill"
+        ></Image>
       </div>
 
       <div className={styles.infoTextContainer}>
