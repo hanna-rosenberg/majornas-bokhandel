@@ -18,7 +18,10 @@ export default function Welcome() {
         </div>
       </div>
 
-      <div className={styles.heroImgContainer}>
+      <div
+        className={styles.heroImgContainer}
+        style={{ width: "100%", height: "100%", position: "relative" }}
+      >
         <Image
           src={HeaderImage}
           className={styles.heroImg}
