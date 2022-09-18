@@ -12,8 +12,8 @@ export default function Welcome() {
         <div className={styles.headerContainerContent}>
           <Image src={Logo} className={styles.logo}></Image>
           <p>
-            ”En trivsam bokhandel där man kan botanisera bland böcker, eller slå
-            sig ner med en espresso och dagstidningen.” Eva Wadman
+            ”En trivsam bokhandel där man kan botanisera bland böcker, eller slå sig ner med en espresso och
+            dagstidningen.” Eva Wadman
           </p>
         </div>
       </div>
@@ -25,12 +25,10 @@ export default function Welcome() {
       <div className={styles.infoTextContainer}>
         <h1>Varmt Välkommen!</h1>
         <p>
-          Majornas böcker &amp; kaffe är en oberoende bokhandel som öppnade
-          sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker,
-          serieböcker och intressanta fackböcker. Förutom böcker säljs också
-          kort, pussel och spel samt en del pappersvaror och roliga presenter.
-          På barnavdelningen hittar man förutom böcker småprylar som är perfekta
-          som kalaspresenter.
+          Majornas böcker &amp; kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell
+          skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs också kort, pussel
+          och spel samt en del pappersvaror och roliga presenter. På barnavdelningen hittar man förutom böcker småprylar
+          som är perfekta som kalaspresenter.
         </p>
       </div>
       <div className={styles.marginTopRight}></div>

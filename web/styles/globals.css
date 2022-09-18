@@ -14,8 +14,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 h1 {
   font-family: TypewriterBold;
@@ -50,7 +50,7 @@ a {
   }
 } */
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 1024px) {
   h1 {
     font-size: 28px;
   }
@@ -64,7 +64,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 640px) {
   h1 {
     font-size: 18px;
   }
