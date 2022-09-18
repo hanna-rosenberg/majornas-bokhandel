@@ -90,7 +90,9 @@
   padding-left: 10%;
   padding-right: 10%;
 }
-
+.heroImgContainer {
+  position: relative;
+}
 @media only screen and (max-width: 1048px) {
   .headerContainerContent {
     padding-top: 0.5rem;
