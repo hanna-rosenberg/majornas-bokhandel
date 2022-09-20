@@ -7,7 +7,7 @@ export default {
     { name: "image", title: "Bild", type: "image" },
     { name: "name", title: "Författarens namn", type: "string" },
     { name: "booktitle", title: "Boktitel", type: "string" },
-    { name: "date", title: "Datum", type: "datetime" },
+    { name: "date", title: "Datum", type: "date" },
     { name: "description", title: "Beskrivning", type: "string" },
   ],
 };
