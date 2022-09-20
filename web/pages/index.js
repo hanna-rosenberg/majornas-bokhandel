@@ -12,15 +12,20 @@ import NewsAndOffers from "../components/NewsAndOffers/NewsAndOffers";
 import AuthorOfTheMonth from "../components/AuthorOfTheMonth/AuthorOfTheMonth";
 import { client } from "../../studio/lib/client";
 
-export default function Home({ newsData, offerData }) {
+// Här är funktionen som gör att vi kan använda det vi väljer att hämta
+// i de olika komponenterna.
+
+export default function Home({ newsData, offerData, nextEventData }) {
   return (
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
-
+      <NewsAndOffers
+        news={newsData[0].news}
+        offer={offerData[0].offer}
+      ></NewsAndOffers>
       <AboutEvents />
-      <NextEvent />
+      <NextEvent events={nextEventData[0]} />
       <UpcomingEvents />
       <FindUs />
       <AuthorOfTheMonth />
@@ -31,13 +36,18 @@ export default function Home({ newsData, offerData }) {
   );
 }
 
+// Här hämtar vi först allt från sanity (i Query-variabeln), sedan fetchar vi det
+// och lägger det i Data-variabeln. newsData kommer alltså innehålla *allt* från news i Sanity.
+
 export const getServerSideProps = async () => {
-  const query = '*[_type == "news"]';
-  const newsData = await client.fetch(query);
+  const newsQuery = '*[_type == "news"]';
+  const newsData = await client.fetch(newsQuery);
   const offerQuery = '*[_type == "offer"]';
   const offerData = await client.fetch(offerQuery);
+  const nextEventQuery = '*[_type == "events"] | order(date)';
+  const nextEventData = await client.fetch(nextEventQuery);
 
   return {
-    props: { newsData, offerData },
+    props: { newsData, offerData, nextEventData },
   };
 };
