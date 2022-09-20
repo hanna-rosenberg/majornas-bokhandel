@@ -1,6 +1,9 @@
 import styles from "./UpcomingEvents.module.css";
+import React from "react";
+import { urlFor } from "../../../studio/lib/client";
 
 export default function UpcommingEvents({ upcoming }) {
+  console.log(upcoming[0].image);
   return (
     <div className={styles.container}>
       <div className={styles.left}></div>
@@ -10,11 +13,14 @@ export default function UpcommingEvents({ upcoming }) {
       <div className={styles.information}></div>
       <div className={styles.upcoming}>
         <p>hej</p>
+        <img src={urlFor(upcoming[0].image).url()} />
         <div>
           <ul>
-            {upcoming.map(function (event, id) {
+            {upcoming.slice(0, 3).map(function (event, id) {
+              console.log(event.image);
               return (
                 <div>
+                  <img key={id} src={urlFor(event.image).url()} />
                   <li key={id}>{event.type}</li>
                   <li key={id}>{event.name}</li>
                   <li key={id}>{event.date}</li>
@@ -23,7 +29,6 @@ export default function UpcommingEvents({ upcoming }) {
             })}
           </ul>
         </div>
-        {console.log(upcoming)}
       </div>
       <div className={styles.bottomLeft}></div>
       <div className={styles.bottomRight}></div>
