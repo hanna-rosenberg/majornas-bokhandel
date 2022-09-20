@@ -26,7 +26,7 @@ export default function Home({ newsData, offerData, nextEventData }) {
       ></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
-      <UpcomingEvents />
+      <UpcomingEvents upcoming={nextEventData} />
       <FindUs />
       <AuthorOfTheMonth />
       <ReadingTips />
