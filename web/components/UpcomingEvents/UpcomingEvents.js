@@ -25,19 +25,27 @@ export default function UpcommingEvents({ upcoming }) {
         <h3>info@majornasbocker.se</h3>
       </div>
       <div className={styles.upcoming}>
+        {/* <img src={urlFor(upcoming[0].image).url()} /> */}
         <div>
           <h2>Kommande evenemang</h2>
           <ul>
-            {upcoming.slice(0, 3).map(function (event) {
+            {upcoming.slice(0, 3).map(function (event, id) {
+              console.log(event.image);
               return (
                 <div className={styles.upcomingEvents}>
                   <div className={styles.upcomingEventsImg}>
-                    {/* <img src={urlFor(event.image).url()} /> */}
+                    <img key={id} src={urlFor(event.image).url()} />
                   </div>
                   <div className={styles.upcomingEventsText}>
-                    <li className={styles.type}>{event.type}</li>
-                    <li className={styles.name}>{event.name}</li>
-                    <li className={styles.date}>{event.date}</li>
+                    <li className={styles.type} key={id}>
+                      {event.type}
+                    </li>
+                    <li className={styles.name} key={id}>
+                      {event.name}
+                    </li>
+                    <li className={styles.date} key={id}>
+                      {event.date}
+                    </li>
                   </div>
                 </div>
               );
