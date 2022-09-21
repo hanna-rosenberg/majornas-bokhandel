@@ -1,0 +1,269 @@
+.container {
+  display: grid;
+  grid-template-columns: 207px 1fr 32px 1fr 207px;
+  grid-template-rows: 91px 48px 364px 165px 48px 160px 48px;
+  gap: 3px;
+  padding: 0 3px 3px 3px;
+  background-color: #adb9ad;
+}
+
+.heading {
+  background-color: white;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+.topRight {
+  background-color: #adb9ad;
+  grid-column: 5 / 6;
+  grid-row: 1 / 2;
+}
+
+.leftTop {
+  background-color: #adb9ad;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+.top {
+  background-color: white;
+  grid-column: 2 / 5;
+  grid-row: 2 / 3;
+}
+
+.right {
+  background-color: white;
+  grid-column: 5 / 6;
+  grid-row: 2 / 8;
+}
+
+.leftLower {
+  background-color: white;
+  grid-column: 1 / 2;
+  grid-row: 4 / 8;
+}
+
+.bookOneImg {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+}
+
+.middleDivTopVertical {
+  background-color: white;
+  grid-column: 3 / 4;
+  grid-row: 3 / 5;
+}
+
+.bookTwoImg {
+  background-color: white;
+  grid-column: 4 / 5;
+  grid-row: 3 / 5;
+}
+
+.middleDivider {
+  background-color: white;
+  grid-column: 2 / 4;
+  grid-row: 5 / 6;
+}
+
+.middleDividerRight {
+  background-color: #edba88;
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+}
+
+.bookOneInfo {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+
+.middleDivLowerVertical {
+  background-color: white;
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+}
+
+.bookTwoInfo {
+  background-color: white;
+  grid-column: 4 / 5;
+  grid-row: 6 / 7;
+}
+
+.bottom {
+  background-color: white;
+  grid-column: 2 / 5;
+  grid-row: 7 / 8;
+}
+
+.mobileTopLeft {
+  display: none;
+}
+
+.mobileRightLower {
+  display: none;
+}
+
+.mobileRightLowest {
+  display: none;
+}
+
+.mobileBottomRight {
+  display: none;
+}
+
+.mobileBottom {
+  display: none;
+}
+
+.mobileBottomLeft {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 97px 1fr 18px 1fr 97px;
+    grid-template-rows: 37px 48px 150px 160px 22px 99px 22px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    grid-template-columns: 16px 1fr 1fr 16px;
+    grid-template-rows: 38px 24px 317px 101px 24px 317px 101px 24px;
+  }
+
+  .heading {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .topRight {
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .leftTop {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .top {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .right {
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+  }
+
+  .leftLower {
+    background-color: #adb9ad;
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+  }
+
+  .bookOneImg {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .middleDivTopVertical {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .bookTwoImg {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 6 / 7;
+  }
+
+  .middleDivider {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 5 / 6;
+  }
+
+  .middleDividerRight {
+    background-color: #edba88;
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+  }
+
+  .bookOneInfo {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+  }
+
+  .middleDivLowerVertical {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+  }
+
+  .bookTwoInfo {
+    background-color: white;
+    grid-column: 2 / 4;
+    grid-row: 7 / 8;
+  }
+
+  .bottom {
+    background-color: white;
+    grid-column: 3 / 4;
+    grid-row: 8 / 9;
+  }
+
+  .mobileTopLeft {
+    display: block;
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .mobileRightLower {
+    display: block;
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 5 / 7;
+  }
+
+  .mobileRightLowest {
+    display: block;
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 7 / 8;
+  }
+
+  .mobileBottomRight {
+    display: block;
+    background-color: white;
+    grid-column: 4 / 5;
+    grid-row: 8 / 9;
+  }
+
+  .mobileBottom {
+    display: block;
+    background-color: #eecd45;
+    grid-column: 2 / 3;
+    grid-row: 8 / 9;
+  }
+
+  .mobileBottomLeft {
+    display: block;
+    display: block;
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+  }
+}
