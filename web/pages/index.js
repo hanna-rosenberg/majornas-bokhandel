@@ -31,7 +31,7 @@ export default function Home({
       ></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
-      <UpcomingEvents />
+      <UpcomingEvents upcoming={nextEventData} />
       <FindUs />
       <AuthorOfTheMonth authorRecommendation={authorRecommendationData[0]} />
       <ReadingTips />

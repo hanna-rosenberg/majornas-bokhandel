@@ -79,6 +79,91 @@
   display: none;
 }
 
+/* NOT GRID */
+.upcomingEvents {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container h2 {
+  font-family: TypewriterBold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.upcomingEventsImg {
+  width: 20%;
+  position: relative;
+}
+
+.upcomingEventsText {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.upcomingEventsText li {
+  font-family: TypewriterBold;
+}
+.upcomingEventsText li:first-child {
+  font-family: TypewriterRegular;
+  font-size: 20px;
+}
+.upcomingEventsText li:last-child {
+  font-family: SourceSerif;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.upcomingEventsImg:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.upcomingEvents img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.upcomingEvents li {
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* STYLING "INFORMATION" */
+.information {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.information h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+.information h3 {
+  font-family: TypewriterRegular;
+}
+
+.information p {
+  margin: 0.5rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 1fr 97px;
