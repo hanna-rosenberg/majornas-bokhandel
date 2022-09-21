@@ -102,6 +102,11 @@
     grid-template-columns: 97px 1fr 97px;
     grid-template-rows: 51px 22px 386px 22px 190px 22px;
   }
+
+  /* NOT GRID */
+  .authorOfTheMonthInfo {
+    padding: 1rem;
+  }
 }
 
 @media only screen and (max-width: 640px) {
