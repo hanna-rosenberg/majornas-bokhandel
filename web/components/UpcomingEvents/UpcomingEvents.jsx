@@ -25,12 +25,10 @@ export default function UpcommingEvents({ upcoming }) {
         <h3>info@majornasbocker.se</h3>
       </div>
       <div className={styles.upcoming}>
-        {/* <img src={urlFor(upcoming[0].image).url()} /> */}
         <div>
           <h2>Kommande evenemang</h2>
           <ul>
             {upcoming.slice(0, 3).map(function (event) {
-              console.log(event.image);
               return (
                 <div className={styles.upcomingEvents}>
                   <div className={styles.upcomingEventsImg}>
