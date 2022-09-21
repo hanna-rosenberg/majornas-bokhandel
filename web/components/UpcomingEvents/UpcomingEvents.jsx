@@ -32,7 +32,7 @@ export default function UpcommingEvents({ upcoming }) {
               return (
                 <div className={styles.upcomingEvents}>
                   <div className={styles.upcomingEventsImg}>
-                    <img src={urlFor(event.image).url()} />
+                    {/* <img src={urlFor(event.image).url()} /> */}
                   </div>
                   <div className={styles.upcomingEventsText}>
                     <li className={styles.type}>{event.type}</li>
