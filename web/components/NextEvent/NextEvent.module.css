@@ -63,16 +63,23 @@
 
 /* NOT GRID */
 
-/* .nextEventImg {
-  min-height: 30px;
-} */
+.infoContainer {
+  width: 100%;
+  position: relative;
+}
 
 .infoContainer img {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: absolute;
   object-fit: cover;
 }
 
+.infoContainer:after {
+  content: "";
+  display: block;
+  padding-bottom: 70%;
+}
 .imgContainer {
   display: flex;
   flex-direction: column;
