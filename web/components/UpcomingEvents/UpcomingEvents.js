@@ -12,18 +12,21 @@ export default function UpcommingEvents({ upcoming }) {
       <div className={styles.topRight}></div>
       <div className={styles.right}></div>
       <div className={styles.information}>
-        <h2>Information</h2>
-        <p>
-          Evenemangen är (med enstaka undantag) gratis, men både bokhandlare och
-          författare uppskattar om man köper en bok!
-        </p>
-        <p>
-          Om inte annat anges öppnas dörren 18:30 och så börjar det 19:00. Fika
-          finns att köpa. Föranmälan krävs, den mailar du tillsammans med ditt
-          namn och mobilnummer till:
-        </p>
+        <div className={styles.informationContainer}>
+          <h2>Information</h2>
+          <p>
+            Evenemangen är (med enstaka undantag) gratis, men både bokhandlare
+            och författare uppskattar om man köper en bok!
+          </p>
+          <p>
+            Om inte annat anges öppnas dörren 18:30 och så börjar det 19:00.
+            Fika finns att köpa. Föranmälan krävs, den mailar du tillsammans med
+            ditt namn och mobilnummer till:
+          </p>
+        </div>
         <h3>info@majornasbocker.se</h3>
       </div>
+
       <div className={styles.upcoming}>
         <div>
           <h2>Kommande evenemang</h2>

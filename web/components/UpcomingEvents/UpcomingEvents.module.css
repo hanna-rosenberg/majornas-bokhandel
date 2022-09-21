@@ -139,20 +139,27 @@
 
 .link {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 2rem;
+  justify-content: center;
   text-decoration: underline;
   font-style: italic;
   padding-bottom: 3rem;
+  padding-top: 1rem;
+  font-size: 18px;
 }
 
 /* STYLING "INFORMATION" */
-.information {
+.informationContainer {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 0.5rem;
   align-items: center;
+  gap: 1rem;
+}
+
+.information h3 {
+  text-align: center;
+  margin-top: 25%;
 }
 
 .information h2 {
@@ -183,12 +190,52 @@
   .upcomingEventsText li:first-child {
     font-size: 16px;
   }
+
+  .information h3 {
+    margin-top: unset;
+  }
+
+  .information p {
+    font-size: 14px;
+  }
+
+  .informationContainer {
+    gap: unset;
+  }
+
+  /* NOT GRID */
+  .information {
+    gap: 0;
+  }
+
+  .container h2 {
+    font-family: TypewriterBold;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+  }
+
+  .container ul {
+    padding: 0.5rem;
+    margin-top: 0;
+  }
+
+  .link {
+    padding-top: 0;
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .upcomingEventsText li {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-rows: 24px 354px 24px 285px 24px;
+    grid-template-rows: 24px 354px 24px 1fr 24px;
   }
 
   .left {
@@ -276,5 +323,14 @@
     background-color: white;
     grid-column: 1 / 2;
     grid-row: 3 / 6;
+  }
+
+  .container ul {
+    padding: 0 0 0 3rem;
+    margin-top: 0;
+  }
+
+  .container h2 {
+    padding-top: 3rem;
   }
 }
