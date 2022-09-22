@@ -15,7 +15,14 @@ import { client } from "../../studio/lib/client";
 // Här är funktionen som gör att vi kan använda det vi väljer att hämta
 // i de olika komponenterna.
 
-export default function Home({ newsData, offerData, nextEventData, authorRecommendationData, bookRecommendationData }) {
+export default function Home({
+  newsData,
+  offerData,
+  nextEventData,
+  authorRecommendationData,
+  bookRecommendationData,
+  infoData,
+}) {
   return (
     <>
       <Navbar />
@@ -24,7 +31,7 @@ export default function Home({ newsData, offerData, nextEventData, authorRecomme
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
-      <FindUs />
+      <FindUs info={infoData[0]} />
       <AuthorOfTheMonth authorRecommendation={authorRecommendationData[0]} />
       <ReadingTips bookRecommendation={bookRecommendationData} />
 
@@ -50,6 +57,9 @@ export const getServerSideProps = async () => {
   const bookRecommendationQuery = '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const bookRecommendationData = await client.fetch(bookRecommendationQuery);
 
+  const infoQuery = '*[_type == "findUs"]';
+  const infoData = await client.fetch(infoQuery);
+
   return {
     props: {
       newsData,
@@ -57,6 +67,8 @@ export const getServerSideProps = async () => {
       nextEventData,
       authorRecommendationData,
       bookRecommendationData,
+
+      infoData,
     },
   };
 };
