@@ -27,7 +27,10 @@ export default function Home({
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
+      <NewsAndOffers
+        news={newsData[0].news}
+        offer={offerData[0].offer}
+      ></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
@@ -36,7 +39,7 @@ export default function Home({
       <ReadingTips bookRecommendation={bookRecommendationData} />
 
       <Instagram />
-      <Footer color="#3f3f3f" />
+      <Footer color="#3f3f3f" info={infoData[0]} />
     </>
   );
 }
@@ -52,9 +55,13 @@ export const getServerSideProps = async () => {
   const nextEventQuery = '*[_type == "events"] | order(date)';
   const nextEventData = await client.fetch(nextEventQuery);
 
-  const authorRecommendationQuery = '*[_type == "authorRecommendation"] | order(date)';
-  const authorRecommendationData = await client.fetch(authorRecommendationQuery);
-  const bookRecommendationQuery = '*[_type == "BookRecommendation"] | order(createdAt desc)';
+  const authorRecommendationQuery =
+    '*[_type == "authorRecommendation"] | order(date)';
+  const authorRecommendationData = await client.fetch(
+    authorRecommendationQuery
+  );
+  const bookRecommendationQuery =
+    '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const bookRecommendationData = await client.fetch(bookRecommendationQuery);
 
   const infoQuery = '*[_type == "findUs"]';
