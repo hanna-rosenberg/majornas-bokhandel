@@ -57,6 +57,8 @@
   .container {
     grid-template-columns: 97px 1fr 97px;
     grid-template-rows: 38px 240px 100px;
+    gap: 2px;
+    padding: 0 2px 2px 2px;
   }
 }
 
@@ -64,6 +66,8 @@
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
     grid-template-rows: 39px 400px 24px;
+    gap: 1px;
+    padding: 0 1px 1px 1px;
   }
 
   .topLeft {

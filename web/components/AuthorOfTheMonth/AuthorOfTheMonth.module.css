@@ -129,6 +129,8 @@
   .container {
     grid-template-columns: 97px 1fr 97px;
     grid-template-rows: 51px 22px 1fr 22px 190px 22px;
+    gap: 2px;
+    padding: 0 2px 2px 2px;
   }
 
   /* NOT GRID */
@@ -141,6 +143,8 @@
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
     grid-template-rows: 51px 24px 1fr 24px 230px 24px;
+    gap: 1px;
+    padding: 0 1px 1px 1px;
   }
 
   .topLeft {
