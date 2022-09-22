@@ -63,6 +63,7 @@ export const getServerSideProps = async () => {
   const bookRecommendationQuery =
     '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const bookRecommendationData = await client.fetch(bookRecommendationQuery);
+
   const infoQuery = '*[_type == "findUs"]';
   const infoData = await client.fetch(infoQuery);
 
@@ -73,6 +74,7 @@ export const getServerSideProps = async () => {
       nextEventData,
       authorRecommendationData,
       bookRecommendationData,
+
       infoData,
     },
   };

@@ -117,6 +117,8 @@
   .container {
     grid-template-columns: 97px 1fr 97px;
     grid-template-rows: 142px 1fr 233px;
+    gap: 2px;
+    padding: 0 2px 2px 2px;
   }
   .desktopLinksContainer {
     display: none;
@@ -147,5 +149,7 @@
   .container {
     grid-template-columns: 16px 1fr 16px;
     grid-template-rows: 157px 1fr 285px;
+    gap: 1px;
+    padding: 0 1px 1px 1px;
   }
 }

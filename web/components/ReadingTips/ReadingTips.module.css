@@ -1,7 +1,8 @@
+
 .container {
   display: grid;
   grid-template-columns: 207px 1fr 32px 1fr 207px;
-  grid-template-rows: 91px 48px 364px 165px 48px 160px 48px;
+  grid-template-rows: 91px 48px 1fr 165px 48px 1fr 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
   background-color: #adb9ad;
@@ -121,17 +122,56 @@
   display: none;
 }
 
+/* NOT GRID  */
+.heading {
+  display: flex;
+
+  align-items: center;
+}
+.heading h2 {
+  margin-left: 50%;
+  font-family: TypewriterBold;
+}
+.bookOneImg,
+.bookTwoImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookOneImg img {
+  padding: 2rem;
+}
+.bookTwoImg img {
+  padding: 2rem;
+}
+.bookTwoInfo,
+.bookOneInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bookTwoInfo p,
+.bookOneInfo p {
+  margin: 0;
+}
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 18px 1fr 97px;
-    grid-template-rows: 37px 48px 150px 160px 22px 99px 22px;
+    grid-template-rows: 37px 48px 1fr 160px 22px 1fr 22px;
+  }
+  .bookOneImg img,
+  .bookTwoImg img {
+    width: 70%;
+    height: 100%;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-rows: 38px 24px 317px 101px 24px 317px 101px 24px;
+    grid-template-rows: 38px 24px 1fr 101px 24px 317px 1 24px;
   }
 
   .heading {
