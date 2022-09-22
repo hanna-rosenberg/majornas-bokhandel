@@ -21,6 +21,7 @@ export default function Home({
   nextEventData,
   authorRecommendationData,
   bookRecommendationData,
+  infoData,
 }) {
   return (
     <>
@@ -33,7 +34,7 @@ export default function Home({
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
-      <FindUs />
+      <FindUs info={infoData[0]} />
       <AuthorOfTheMonth authorRecommendation={authorRecommendationData[0]} />
       <ReadingTips bookRecommendation={bookRecommendationData} />
 
@@ -63,6 +64,9 @@ export const getServerSideProps = async () => {
     '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const bookRecommendationData = await client.fetch(bookRecommendationQuery);
 
+  const infoQuery = '*[_type == "findUs"]';
+  const infoData = await client.fetch(infoQuery);
+
   return {
     props: {
       newsData,
@@ -70,6 +74,8 @@ export const getServerSideProps = async () => {
       nextEventData,
       authorRecommendationData,
       bookRecommendationData,
+
+      infoData,
     },
   };
 };
