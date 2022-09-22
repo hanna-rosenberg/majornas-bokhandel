@@ -25,12 +25,34 @@
   grid-row: 1 / 2;
 }
 
+/*NOT GRID*/
+
+.infoContainer {
+  text-align: center;
+  padding: 24px 0 20px 0;
+}
+
+.infoContainer h4 {
+  font-size: 24px;
+  font-family: SourceSerif;
+  line-height: 30px;
+  margin: 0;
+}
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 97px;
     grid-template-rows: 104px;
     gap: 2px;
     padding: 0 2px 2px 2px;
+  }
+  /*NOT GRID*/
+  .infoContainer {
+    padding: 19px 0 14px 0;
+  }
+
+  .infoContainer h4 {
+    font-size: 14px;
+    line-height: 17.5px;
   }
 }
 
@@ -40,5 +62,13 @@
     grid-template-rows: 99px;
     gap: 1px;
     padding: 0 1px 1px 1px;
+  }
+  /*NOT GRID*/
+  .infoContainer {
+    padding: 11px 0 9px 0;
+  }
+
+  .infoContainer h4 {
+    line-height: 18.5px;
   }
 }
