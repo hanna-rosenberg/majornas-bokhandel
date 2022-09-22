@@ -15,18 +15,29 @@ import { client } from "../../studio/lib/client";
 // Här är funktionen som gör att vi kan använda det vi väljer att hämta
 // i de olika komponenterna.
 
-export default function Home({ newsData, offerData, nextEventData, authorRecommendationData }) {
+export default function Home({
+  newsData,
+  offerData,
+  nextEventData,
+  authorRecommendationData,
+  bookRecommendationData,
+  infoData,
+}) {
   return (
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
+      <NewsAndOffers
+        news={newsData[0].news}
+        offer={offerData[0].offer}
+      ></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
-      <FindUs />
+      <FindUs info={infoData[0]} />
       <AuthorOfTheMonth authorRecommendation={authorRecommendationData[0]} />
-      <ReadingTips />
+      <ReadingTips bookRecommendation={bookRecommendationData} />
+
       <Instagram />
       <Footer />
     </>
@@ -43,10 +54,26 @@ export const getServerSideProps = async () => {
   const offerData = await client.fetch(offerQuery);
   const nextEventQuery = '*[_type == "events"] | order(date)';
   const nextEventData = await client.fetch(nextEventQuery);
-  const authorRecommendationQuery = '*[_type == "authorRecommendation"] | order(date)';
-  const authorRecommendationData = await client.fetch(authorRecommendationQuery);
+
+  const authorRecommendationQuery =
+    '*[_type == "authorRecommendation"] | order(date)';
+  const authorRecommendationData = await client.fetch(
+    authorRecommendationQuery
+  );
+  const bookRecommendationQuery =
+    '*[_type == "BookRecommendation"] | order(createdAt desc)';
+  const bookRecommendationData = await client.fetch(bookRecommendationQuery);
+  const infoQuery = '*[_type == "findUs"]';
+  const infoData = await client.fetch(infoQuery);
 
   return {
-    props: { newsData, offerData, nextEventData, authorRecommendationData },
+    props: {
+      newsData,
+      offerData,
+      nextEventData,
+      authorRecommendationData,
+      bookRecommendationData,
+      infoData,
+    },
   };
 };
