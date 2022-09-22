@@ -1,4 +1,5 @@
 import styles from "./FindUs.module.css";
+import GoogleMaps from "../GoogleMaps/GoogleMaps";
 
 export default function FindUs({ info }) {
   return (
@@ -24,7 +25,10 @@ export default function FindUs({ info }) {
             <p>{info.phoneNumber}</p>
           </div>
         </div>
-        <div className={styles.map}>{console.log(info)}5</div>
+        <div className={styles.map}>
+          {console.log(info)}
+          <GoogleMaps />
+        </div>
         <div className={styles.mobileMiddleEdgeLeft}>6</div>
         <div className={styles.mobileMiddleEdgeRight}>7</div>
         <div className={styles.mobileMiddleLeft}>8</div>
