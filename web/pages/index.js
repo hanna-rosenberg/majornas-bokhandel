@@ -37,9 +37,8 @@ export default function Home({
       <FindUs info={infoData[0]} />
       <AuthorOfTheMonth authorRecommendation={authorRecommendationData[0]} />
       <ReadingTips bookRecommendation={bookRecommendationData} />
-
       <Instagram />
-      <Footer />
+      <Footer color="#edba88" info={infoData[0]} />
     </>
   );
 }
@@ -74,7 +73,6 @@ export const getServerSideProps = async () => {
       nextEventData,
       authorRecommendationData,
       bookRecommendationData,
-
       infoData,
     },
   };

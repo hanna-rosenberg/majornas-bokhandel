@@ -5,9 +5,9 @@ export default function FindUs({ info }) {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.left}>1</div>
-        <div className={styles.right}>2</div>
-        <div className={styles.bottom}>3</div>
+        <div className={styles.left}></div>
+        <div className={styles.right}></div>
+        <div className={styles.bottom}></div>
         <div className={styles.info}>
           <div className={styles.infoBox}>
             <h3>{info.findUs}</h3>
