@@ -29,14 +29,14 @@ export default function FindUs({ info }) {
           {console.log(info)}
           <GoogleMaps />
         </div>
-        <div className={styles.mobileMiddleEdgeLeft}>6</div>
-        <div className={styles.mobileMiddleEdgeRight}>7</div>
-        <div className={styles.mobileMiddleLeft}>8</div>
-        <div className={styles.mobileMiddleRight}>9</div>
-        <div className={styles.mobileLeft}>10</div>
-        <div className={styles.mobileRight}>11</div>
-        <div className={styles.mobileBottomLeft}>12</div>
-        <div className={styles.mobileBottomRight}>13</div>
+        <div className={styles.mobileMiddleEdgeLeft}></div>
+        <div className={styles.mobileMiddleEdgeRight}></div>
+        <div className={styles.mobileMiddleLeft}></div>
+        <div className={styles.mobileMiddleRight}></div>
+        <div className={styles.mobileLeft}></div>
+        <div className={styles.mobileRight}></div>
+        <div className={styles.mobileBottomLeft}></div>
+        <div className={styles.mobileBottomRight}></div>
       </div>
     </>
   );
