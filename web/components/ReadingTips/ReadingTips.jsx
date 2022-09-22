@@ -14,17 +14,31 @@ export default function ReadingTips({ bookRecommendation }) {
       <div className={styles.right}></div>
       <div className={styles.leftLower}></div>
       <div className={styles.bookOneImg}>
-        <img width={50} src={urlFor(bookRecommendation[0].image).url()} />
+        <img
+          height={450}
+          width={320}
+          src={urlFor(bookRecommendation[0].image).url()}
+        />
       </div>
       <div className={styles.middleDivTopVertical}></div>
       <div className={styles.bookTwoImg}>
-        <img width={100} src={urlFor(bookRecommendation[1].image).url()} />
+        <img
+          height={450}
+          width={320}
+          src={urlFor(bookRecommendation[1].image).url()}
+        />
       </div>
       <div className={styles.middleDivider}></div>
       <div className={styles.middleDividerRight}></div>
-      <div className={styles.bookOneInfo}></div>
+      <div className={styles.bookOneInfo}>
+        <h3>{bookRecommendation[0].booktitle}</h3>
+        <p>{bookRecommendation[0].name}</p>
+      </div>
       <div className={styles.middleDivLowerVertical}></div>
-      <div className={styles.bookTwoInfo}></div>
+      <div className={styles.bookTwoInfo}>
+        <h3>{bookRecommendation[1].booktitle}</h3>
+        <p>{bookRecommendation[1].name}</p>
+      </div>
       <div className={styles.bottom}></div>
       <div className={styles.mobileTopLeft}></div>
       <div className={styles.mobileRightLower}></div>
