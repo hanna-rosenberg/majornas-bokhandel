@@ -121,6 +121,17 @@
   display: none;
 }
 
+/* NOT GRID  */
+.heading {
+  display: flex;
+
+  align-items: center;
+}
+.heading h2 {
+  margin-left: 50%;
+  font-family: TypewriterBold;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 18px 1fr 97px;
