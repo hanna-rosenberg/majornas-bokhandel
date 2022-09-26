@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 207px 1fr 207px;
-  grid-template-rows: 65px 354px 200px;
+  grid-template-rows: 65px 1fr 200px;
   gap: 3px;
   padding: 0 3px 3px 3px;
   background-color: #adb9ad;
@@ -60,11 +60,79 @@
   justify-content: center;
   align-items: center;
 }
+.events ul {
+  display: flex;
+  padding: 1rem 0 1rem 0;
+  justify-content: space-between;
+}
+
+.events li {
+  /* width: 270px; */
+  list-style: none;
+}
+
+.upcomingEvents {
+  border: 3px solid #adb9ad;
+  width: 30%;
+}
+.upcomingEventsImg {
+  width: 100%;
+  position: relative;
+}
+.upcomingEventsImg:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.upcomingEvents img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.upcomingEventsText {
+  text-align: center;
+  font-size: 18px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.upcomingEventsText li:first-child {
+  font-family: TypeWriterBold;
+  font-size: 20px;
+}
+
+.upcomingEventsText li:last-child {
+  font-family: SourceSerif;
+  font-style: italic;
+}
+
+.upcomingEventsText li {
+  font-family: SourceSerif;
+}
+
+.upcomingEvents {
+  border: 3px solid #adb9ad;
+  width: 30%;
+}
+
+.upcomingEvents:first-child {
+  border-left: none;
+}
+
+.upcomingEvents:last-child {
+  border-right: none;
+}
 
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 97px;
-    grid-template-rows: 38px 240px 100px;
+    grid-template-rows: 38px 1fr 100px;
     gap: 2px;
     padding: 0 2px 2px 2px;
   }
@@ -73,7 +141,7 @@
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-rows: 39px 400px 24px;
+    grid-template-rows: 39px 1fr 24px;
     gap: 1px;
     padding: 0 1px 1px 1px;
   }
@@ -125,5 +193,24 @@
     background-color: #adb9ad;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+  }
+
+  /* NOT GRID */
+  .events ul {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .upcomingEvents {
+    width: unset;
+    margin-bottom: 2rem;
+  }
+
+  .upcomingEventsText {
+    font-size: 14px;
+    height: 100px;
+  }
+  .upcomingEvents li:first-child {
+    font-size: 14px;
   }
 }

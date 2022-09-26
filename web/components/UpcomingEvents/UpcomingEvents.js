@@ -32,7 +32,6 @@ export default function UpcommingEvents({ upcoming }) {
           <h2>Kommande evenemang</h2>
           <ul>
             {upcoming.slice(0, 3).map(function (event) {
-              // console.log(event._id);
               return (
                 <div className={styles.upcomingEvents} key={event._id}>
                   <div className={styles.upcomingEventsImg}>

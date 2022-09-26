@@ -27,7 +27,10 @@ export default function Home({
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
+      <NewsAndOffers
+        news={newsData[0].news}
+        offer={offerData[0].offer}
+      ></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
@@ -49,12 +52,16 @@ export const getServerSideProps = async () => {
   const newsData = await client.fetch(newsQuery);
   const offerQuery = '*[_type == "offer"]';
   const offerData = await client.fetch(offerQuery);
-  const nextEventQuery = '*[_type == "events"] | order(date)';
+  const nextEventQuery = '*[_type == "events" && date >= now()] | order(date)';
   const nextEventData = await client.fetch(nextEventQuery);
 
-  const authorRecommendationQuery = '*[_type == "authorRecommendation"] | order(date)';
-  const authorRecommendationData = await client.fetch(authorRecommendationQuery);
-  const bookRecommendationQuery = '*[_type == "BookRecommendation"] | order(createdAt desc)';
+  const authorRecommendationQuery =
+    '*[_type == "authorRecommendation"] | order(date)';
+  const authorRecommendationData = await client.fetch(
+    authorRecommendationQuery
+  );
+  const bookRecommendationQuery =
+    '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const bookRecommendationData = await client.fetch(bookRecommendationQuery);
 
   const infoQuery = '*[_type == "findUs"]';
