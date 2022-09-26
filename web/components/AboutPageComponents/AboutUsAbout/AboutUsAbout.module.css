@@ -1,0 +1,164 @@
+.container {
+  display: grid;
+  grid-template-columns: 207px 1fr 24px 1fr 207px;
+  grid-template-rows: 125px 125px 48px 298px 108px 48px;
+  gap: 3px;
+  padding: 0 3px 3px 3px;
+  background-color: #adb9ad;
+}
+
+.topLeft {
+  background-color: white;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.AboutUs {
+  background-color: white;
+  grid-column: 2 / 5;
+  grid-row: 1 / 3;
+}
+
+.topRight {
+  background-color: #edba88;
+  grid-column: 5 / 6;
+  grid-row: 1 / 3;
+}
+
+.topLeftLower {
+  background-color: #3f3f3f;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.left {
+  background-color: white;
+  grid-column: 1 / 2;
+  grid-row: 3 / 7;
+}
+
+.topDivider {
+  background-color: white;
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+}
+
+.right {
+  background-color: white;
+  grid-column: 5 / 6;
+  grid-row: 3 / 7;
+}
+
+.image {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 4 / 6;
+}
+
+.middleDivider {
+  background-color: #eecd45;
+  grid-column: 3 / 4;
+  grid-row: 4 / 6;
+}
+
+.infoOwner {
+  background-color: white;
+  grid-column: 4 / 5;
+  grid-row: 4 / 6;
+}
+
+.bottomLeft {
+  background-color: #adb9ad;
+  grid-column: 1 / 2;
+  grid-row: 5 / 7;
+}
+
+.bottom {
+  background-color: white;
+  grid-column: 2 / 5;
+  grid-row: 6 / 7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 97px 1fr 22px 1fr 97px;
+    grid-template-rows: 65px 65px 22px 192px 60px 22px;
+    gap: 2px;
+    padding: 0 2px 2px 2px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 16px 1fr 16px;
+    grid-template-rows: 159px 286px 162px 24px;
+    gap: 1px;
+    padding: 0 1px 1px 1px;
+  }
+
+  .topLeft {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .AboutUs {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .topRight {
+    background-color: #edba88;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .topLeftLower {
+    display: none;
+  }
+
+  .left {
+    background-color: #3f3f3f;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .topDivider {
+    display: none;
+  }
+
+  .right {
+    background-color: white;
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+  }
+
+  .image {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .middleDivider {
+    display: none;
+  }
+
+  .infoOwner {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .bottomLeft {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  .bottom {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}
