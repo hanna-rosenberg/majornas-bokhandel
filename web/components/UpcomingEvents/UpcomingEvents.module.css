@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 207px 1fr 1fr 207px;
+  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 1fr clamp(140px, 12vw, 207px);
   grid-template-rows: 48px 108px 1fr 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
