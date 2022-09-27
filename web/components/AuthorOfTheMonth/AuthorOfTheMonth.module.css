@@ -124,6 +124,9 @@
 .info p {
   font-family: SourceSerif;
 }
+.image span {
+  height: 100% !important;
+}
 
 @media only screen and (max-width: 1024px) {
   .container {

@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 207px 1fr 24px 1fr 207px;
-  grid-template-rows: 65px 48px 438px 48px;
+  grid-template-rows: 65px 48px 1fr 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
   background-color: #adb9ad;
@@ -70,11 +70,27 @@
 .mobileMiddleDivider {
   display: none;
 }
+/* NOT GRID  */
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header h2 {
+  margin: 0;
+  font-family: TypeWriterBold;
+}
+
+.imageTwo span,
+.image span {
+  height: 100% !important;
+}
 
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 22px 1fr 97px;
-    grid-template-rows: 39px 22px 269px 22px;
+    grid-template-rows: 39px 22px 1fr 22px;
     gap: 2px;
     padding: 0 2px 2px 2px;
   }
@@ -83,7 +99,7 @@
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-rows: 48px 24px 231px 24px 237px 24px;
+    grid-template-rows: 48px 24px 1fr 24px 1fr 24px;
     gap: 1px;
     padding: 0 1px 1px 1px;
   }

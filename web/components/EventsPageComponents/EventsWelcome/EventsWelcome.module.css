@@ -36,6 +36,9 @@
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
+.image span {
+  height: 100% !important;
+}
 
 .right {
   background-color: white;

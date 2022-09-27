@@ -96,6 +96,9 @@
   font-family: TypewriterBold;
   font-size: 20px;
 }
+.image span {
+  height: 100% !important;
+}
 
 @media only screen and (max-width: 1024px) {
   .container {
