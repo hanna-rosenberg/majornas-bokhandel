@@ -213,4 +213,11 @@
   .upcomingEvents li:first-child {
     font-size: 14px;
   }
+  .upcomingEvents:first-child {
+    border: 3px solid #adb9ad;
+  }
+
+  .upcomingEvents:last-child {
+    border: 3px solid #adb9ad;
+  }
 }
