@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { client } from "../../../studio/lib/client";
 import AboutUsAbout from "../../components/AboutPageComponents/AboutUsAbout/AboutUsAbout";
 import TheStoreAbout from "../../components/AboutPageComponents/TheStoreAbout/TheStoreAbout";
+import FindUsAbout from "../../components/AboutPageComponents/FindUsAbout/FindUsAbout";
 
 export default function Home({ infoData }) {
   return (
@@ -10,6 +11,7 @@ export default function Home({ infoData }) {
       <Navbar />
       <AboutUsAbout />
       <TheStoreAbout />
+      <FindUsAbout />
       <Footer color="#edba88" info={infoData[0]} />
     </>
   );
