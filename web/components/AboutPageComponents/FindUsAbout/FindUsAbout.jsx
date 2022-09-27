@@ -8,9 +8,9 @@ export default function FindUsAbout() {
       <div className={styles.left}></div>
       <div className={styles.topDivider}></div>
       <div className={styles.right}></div>
-      <div className={styles.image}></div>
+      <div className={styles.adress}></div>
       <div className={styles.middleDivider}></div>
-      <div className={styles.imageTwo}></div>
+      <div className={styles.map}></div>
       <div className={styles.bottomLeft}></div>
       <div className={styles.bottomRight}></div>
     </div>
