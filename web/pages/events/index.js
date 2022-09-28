@@ -25,8 +25,7 @@ export const getServerSideProps = async () => {
   const nextEventQuery = '*[_type == "events" && date >= now()] | order(date)';
   const nextEventData = await client.fetch(nextEventQuery);
 
-  const previousEventQuery =
-    '*[_type == "events" && date < now()] | order(date)';
+  const previousEventQuery = '*[_type == "events" && date < now()] | order(date)';
   const previousEventData = await client.fetch(previousEventQuery);
 
   return {
