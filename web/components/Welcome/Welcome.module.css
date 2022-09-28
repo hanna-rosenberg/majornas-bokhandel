@@ -66,9 +66,12 @@
 
 .headerContainer {
   background: url(../../assets/texture.png);
+  background-size: cover;
 }
+
 .infoTextContainer {
   background: url(../../assets/texture.png);
+  background-size: cover;
 }
 
 .headerContainerContent {

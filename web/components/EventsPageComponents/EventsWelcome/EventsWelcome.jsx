@@ -27,7 +27,8 @@ export default function Welcome() {
           författare uppskattar om man köper en bok!
           <br /> <br /> Om inte annat anges öppnas dörren 18.30 och så börjar
           det 19:00. Fika finns att köpa.
-          <br /> Föranmälan krävs, den mailar du tillsammans med ditt namn och
+          <br /> <br />
+          Föranmälan krävs, den mailar du tillsammans med ditt namn och
           mobilnummer till:
         </p>
       </div>

@@ -59,6 +59,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(../../../assets/texture.png);
+  background-size: cover;
 }
 .events ul {
   display: flex;
@@ -100,6 +102,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background: url(../../../assets/texture.png);
+  background-size: cover;
 }
 
 .upcomingEventsText li:first-child {

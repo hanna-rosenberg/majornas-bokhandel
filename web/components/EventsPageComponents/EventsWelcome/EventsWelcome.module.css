@@ -90,6 +90,8 @@
   align-items: center;
   text-align: center;
   padding: 1rem 5rem 1rem 5rem;
+  background: url(../../../assets/texture.png);
+  background-size: cover;
 }
 .header p {
   margin: 0;
@@ -101,6 +103,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(../../../assets/texture.png);
+  background-size: cover;
 }
 
 @media only screen and (max-width: 1024px) {

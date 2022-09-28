@@ -1,6 +1,10 @@
 .container {
   display: grid;
-  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 1fr clamp(140px, 12vw, 207px);
+  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 1fr clamp(
+      140px,
+      12vw,
+      207px
+    );
   grid-template-rows: 48px 108px 1fr 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
@@ -157,9 +161,19 @@
   gap: 1rem;
 }
 
-.information h3 {
+.information {
+  background: url(../../assets/texture.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+.information h4 {
   text-align: center;
-  margin-top: 25%;
+  font-family: TypewriterBold;
+  font-size: 20px;
 }
 
 .information h2 {
@@ -336,5 +350,10 @@
 
   .container h2 {
     padding-top: 3rem;
+  }
+
+  /* NOT grid */
+  .upcoming h2 {
+    font-size: 22px;
   }
 }

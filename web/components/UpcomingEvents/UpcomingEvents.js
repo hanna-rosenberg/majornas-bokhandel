@@ -20,11 +20,11 @@ export default function UpcommingEvents({ upcoming }) {
           </p>
           <p>
             Om inte annat anges öppnas dörren 18:30 och så börjar det 19:00.
-            Fika finns att köpa. Föranmälan krävs, den mailar du tillsammans med
-            ditt namn och mobilnummer till:
+            Fika finns att köpa. <br></br>Föranmälan krävs, den mailar du
+            tillsammans med ditt namn och mobilnummer till:
           </p>
+          <h4>info@majornasbocker.se</h4>
         </div>
-        <h3>info@majornasbocker.se</h3>
       </div>
 
       <div className={styles.upcoming}>

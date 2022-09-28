@@ -1,6 +1,10 @@
 .container {
   display: grid;
-  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 24px 1fr clamp(140px, 12vw, 207px);
+  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 24px 1fr clamp(
+      140px,
+      12vw,
+      207px
+    );
   grid-template-rows: 125px 125px 48px 1fr 108px 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
@@ -87,6 +91,8 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 3rem;
+  background: url(../../../assets/texture.png);
+  background-size: cover;
 }
 .AboutUs h3 {
   margin: 0;
