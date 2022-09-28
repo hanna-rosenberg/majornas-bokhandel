@@ -10,8 +10,8 @@ export default function AboutEvents() {
       <div className={styles.textContainer}>
         <Image src={bookIcon} className={styles.bookIcon}></Image>
         <h4>
-          Bokhandeln anordnar regelbundet författarkvällar. En rad
-          uppmärksammade och intressanta författare har gästat bokhandeln.
+          Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat
+          bokhandeln.
         </h4>
       </div>
       <div className={styles.dividerTop}></div>

@@ -7,21 +7,25 @@
   background-color: #adb9ad;
 }
 
-.leftMarginContainer {
+.left {
   background-color: white;
   grid-column: 1 / 2;
 }
 
-.middleContainer {
+.middle {
   background-color: white;
   grid-column-start: 2 / 3;
 }
 
-.rightMarginContainer {
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   grid-column-start: 3 /4;
 }
 
+/* Desktop-links */
 .desktopLinksContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -42,16 +46,80 @@
   font-size: 24px;
 }
 
+/* Social-Media Links*/
+
+.socialMediaContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socialMediaContainer span {
+  width: 30px !important;
+  height: 100px !important;
+  margin: 12px !important;
+}
+
+.mobileSocialMediaContainer {
+  display: none;
+}
+
+/* Hamburger */
+
+.hamburgerButton {
+  display: none;
+}
+
+.mobileHamburgerButton {
+  display: none;
+}
+
+.hamburgerBar {
+  background-color: black;
+  width: 100%;
+  height: 2px;
+}
+
+/* NavMenu */
+.navMenu {
+  position: fixed;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 97px;
     grid-template-rows: 47px;
     gap: 2px;
-    padding: 0 2px 2px 2px;
+    padding: 2px 2px 2px 2px;
   }
 
   .desktopLinksContainer {
     display: none;
+  }
+
+  .socialMediaContainer span {
+    width: 22px !important;
+    height: 100px !important;
+    margin: 8px !important;
+  }
+
+  .hamburgerButton {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
   }
 }
 
@@ -60,6 +128,28 @@
     grid-template-columns: 16px 1fr 16px;
     grid-template-rows: 57px;
     gap: 1px;
-    padding: 0 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+  }
+
+  .socialMediaContainer {
+    display: none;
+  }
+
+  .mobileSocialMediaContainer {
+    display: flex;
+    width: 80px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileSocialMediaContainer span {
+    width: 20px !important;
+    height: 100px !important;
+    margin: 6px !important;
+  }
+
+  .hamburgerButton {
+    display: none;
   }
 }
