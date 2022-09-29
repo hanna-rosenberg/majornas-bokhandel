@@ -1,7 +1,7 @@
 import styles from "./Welcome.module.css";
 import Image from "next/image";
 import Logo from "../../assets/logo.svg";
-import HeaderImage from "../../assets/welcome.jpg";
+import HeaderImage from "../../assets/welcome.png";
 export default function Welcome() {
   return (
     <div className={styles.container}>

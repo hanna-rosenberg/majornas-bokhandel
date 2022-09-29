@@ -1,6 +1,6 @@
 import styles from "./AuthorOfTheMonth.module.css";
 import Image from "next/image";
-import booksImage from "../../assets/books-image.jpg";
+import booksImage from "../../assets/books-image.png";
 
 export default function AuthorOfTheMonth({ authorRecommendation }) {
   return (

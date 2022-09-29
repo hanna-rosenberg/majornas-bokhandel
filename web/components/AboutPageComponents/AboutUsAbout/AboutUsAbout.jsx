@@ -1,6 +1,6 @@
 import styles from "./AboutUsAbout.module.css";
 import Image from "next/image";
-import Image0ne from "../../../assets/about-image-one.jpg";
+import Image0ne from "../../../assets/about-image-one.png";
 
 export default function AboutUsAbout() {
   return (
@@ -9,9 +9,8 @@ export default function AboutUsAbout() {
       <div className={styles.AboutUs}>
         <h3>Om Oss</h3>
         <p>
-          Majornas böcker &amp; kaffe är en oberoende bokhandel som öppnade
-          sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker,
-          serieböcker och intressanta fackböcker.
+          Majornas böcker &amp; kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell
+          skönlitteratur, barnböcker, serieböcker och intressanta fackböcker.
         </p>
       </div>
       <div className={styles.topRight}></div>
@@ -26,9 +25,8 @@ export default function AboutUsAbout() {
       <div className={styles.infoOwner}>
         <h4>Hej på er!</h4>
         <p>
-          Mitt namn är Eva Wadman och jag driver butiken Majornas böcker &amp;
-          kaffe. Böcker är min passion och om du har vägarna förbi är du varmt
-          välkommen in på varm kopp kaffe och bulle.
+          Mitt namn är Eva Wadman och jag driver butiken Majornas böcker &amp; kaffe. Böcker är min passion och om du
+          har vägarna förbi är du varmt välkommen in på varm kopp kaffe och bulle.
         </p>
       </div>
       <div className={styles.bottomLeft}></div>

@@ -1,6 +1,6 @@
 import styles from "./EventsWelcome.module.css";
 import Image from "next/image";
-import headerImage from "../../../assets/header-books.jpg";
+import headerImage from "../../../assets/header-books.png";
 
 export default function Welcome() {
   return (
@@ -9,9 +9,8 @@ export default function Welcome() {
       <div className={styles.header}>
         <h3>Evenemang</h3>
         <p>
-          Varmt välkommen till våra evenemang, vi har författarbesök &amp;
-          bokcirklar. Nedan kan du se kommande evenemang och tidigare
-          författarbesök.
+          Varmt välkommen till våra evenemang, vi har författarbesök &amp; bokcirklar. Nedan kan du se kommande
+          evenemang och tidigare författarbesök.
         </p>
       </div>
       <div className={styles.topRight}></div>
@@ -23,13 +22,11 @@ export default function Welcome() {
       <div className={styles.lowerLeft}></div>
       <div className={styles.infoTextBottom}>
         <p>
-          Evenemangen är (med enstaka undantag) gratis, men både bokhandlare och
-          författare uppskattar om man köper en bok!
-          <br /> <br /> Om inte annat anges öppnas dörren 18.30 och så börjar
-          det 19:00. Fika finns att köpa.
+          Evenemangen är (med enstaka undantag) gratis, men både bokhandlare och författare uppskattar om man köper en
+          bok!
+          <br /> <br /> Om inte annat anges öppnas dörren 18.30 och så börjar det 19:00. Fika finns att köpa.
           <br /> <br />
-          Föranmälan krävs, den mailar du tillsammans med ditt namn och
-          mobilnummer till:
+          Föranmälan krävs, den mailar du tillsammans med ditt namn och mobilnummer till:
         </p>
       </div>
       <div className={styles.lowerRight}></div>

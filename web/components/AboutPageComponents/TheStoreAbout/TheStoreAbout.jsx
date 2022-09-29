@@ -1,7 +1,7 @@
 import styles from "./TheStoreAbout.module.css";
 import Image from "next/image";
-import Image0ne from "../../../assets/store-one.jpg";
-import ImageTwo from "../../../assets/store-two.jpg";
+import Image0ne from "../../../assets/store-one.png";
+import ImageTwo from "../../../assets/store-two.png";
 export default function TheStoreAbout() {
   return (
     <div className={styles.container}>
