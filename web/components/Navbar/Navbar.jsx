@@ -3,6 +3,7 @@ import Image from "next/image";
 import FacebookLogo from "../../assets/facebookLogo.svg";
 import InstagramLogo from "../../assets/instagramLogo.svg";
 import { useState } from "react";
+import NavPopUpMenu from "../NavPopUpMenu/NavPopUpMenu";
 
 export default function Navbar() {
   const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
@@ -42,12 +43,7 @@ export default function Navbar() {
           <div className={styles.hamburgerBar}></div>
         </button>
       </div>
-
-      {navMenuIsOpen && (
-        <div className={styles.navMenu}>
-          <button onClick={() => setNavMenuIsOpen(false)}>x</button>
-        </div>
-      )}
+      {navMenuIsOpen && <NavPopUpMenu navMenuIsOpenState={setNavMenuIsOpen} />}
     </div>
   );
 }
