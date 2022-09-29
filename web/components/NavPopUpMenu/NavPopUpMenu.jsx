@@ -1,5 +1,6 @@
 import styles from "./NavPopUpMenu.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import FacebookLogo from "../../assets/facebookLogo.svg";
 import InstagramLogo from "../../assets/instagramLogo.svg";
 
@@ -15,13 +16,19 @@ export default function NavPopUpMenu({ navMenuIsOpenState }) {
       <div className={styles.menuContentContainer}>
         <div className={styles.pageLinkContainer}>
           <div className={styles.singleLinkContainer}>
-            <a href="">Hem</a>
+            <Link href="/">
+              <a>Hem</a>
+            </Link>
           </div>
           <div className={styles.singleLinkContainer}>
-            <a href="">Om Oss</a>
+            <Link href="/about">
+              <a>Om Oss</a>
+            </Link>
           </div>
           <div className={styles.singleLinkContainer}>
-            <a href="">Evenemang</a>
+            <Link href="/events">
+              <a>Evenemang</a>
+            </Link>
           </div>
         </div>
         <div className={styles.socialMediaContainer}>

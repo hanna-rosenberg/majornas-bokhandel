@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import FacebookLogo from "../../assets/facebookLogo.svg";
 import InstagramLogo from "../../assets/instagramLogo.svg";
 import { useState } from "react";
@@ -21,15 +22,15 @@ export default function Navbar() {
       </div>
       <div className={styles.middle}>
         <div className={styles.desktopLinksContainer}>
-          <a href="#" className={styles.desktopLink}>
-            <span>Hem</span>
-          </a>
-          <a href="#" className={styles.desktopLink}>
-            <span>Om Oss</span>
-          </a>
-          <a href="#" className={styles.desktopLink}>
-            <span>Evenemang</span>
-          </a>
+          <Link href="/">
+            <a className={styles.desktopLink}>Hem</a>
+          </Link>
+          <Link href="/about">
+            <a className={styles.desktopLink}>Om Oss</a>
+          </Link>
+          <Link href="/events">
+            <a className={styles.desktopLink}>Evenemang</a>
+          </Link>
         </div>
         <div className={styles.mobileSocialMediaContainer}>
           <a href="">
