@@ -12,8 +12,9 @@
   display: flex;
   width: 100%;
   justify-content: right;
-  padding: 15px 36px;
+  padding: 12px 34px;
 }
+
 .closeButton {
   position: relative;
   background-color: transparent;
@@ -62,6 +63,12 @@
   border-bottom: 1px solid black;
 }
 
+.singleLinkContainer a {
+  font-size: 32px;
+  font-family: TypewriterBold;
+  transform: translateY(6px);
+}
+
 .socialMediaContainer {
   margin: 32px 0px;
   display: flex;
@@ -71,4 +78,15 @@
   width: 40px !important;
   height: 40px !important;
   margin: 0 12px !important;
+}
+
+.majornasLogoImg span {
+  width: 187px !important;
+  height: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .closeButtonContainer {
+    padding: 16px 25px;
+  }
 }

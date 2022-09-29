@@ -13,10 +13,10 @@ export default function Navbar() {
       <div className={styles.left}>
         <div className={styles.socialMediaContainer}>
           <a href="">
-            <Image src={FacebookLogo} className={styles.logoImg}></Image>
+            <Image src={InstagramLogo} className={styles.logoImg}></Image>
           </a>
           <a href="">
-            <Image src={InstagramLogo} className={styles.logoImg}></Image>
+            <Image src={FacebookLogo} className={styles.logoImg}></Image>
           </a>
         </div>
       </div>
@@ -34,12 +34,18 @@ export default function Navbar() {
         </div>
         <div className={styles.mobileSocialMediaContainer}>
           <a href="">
-            <Image src={FacebookLogo} className={styles.logoImg}></Image>
-          </a>
-          <a href="">
             <Image src={InstagramLogo} className={styles.logoImg}></Image>
           </a>
+          <a href="">
+            <Image src={FacebookLogo} className={styles.logoImg}></Image>
+          </a>
         </div>
+
+        <button onClick={() => setNavMenuIsOpen(true)} className={styles.mobileHamburgerButton}>
+          <div className={styles.hamburgerBar}></div>
+          <div className={styles.hamburgerBar}></div>
+          <div className={styles.hamburgerBar}></div>
+        </button>
       </div>
       <div className={styles.right}>
         <button onClick={() => setNavMenuIsOpen(true)} className={styles.hamburgerButton}>
