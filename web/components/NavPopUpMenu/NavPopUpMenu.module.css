@@ -86,7 +86,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
+  .menuContainer {
     border: 1px solid #adb9ad;
   }
 
