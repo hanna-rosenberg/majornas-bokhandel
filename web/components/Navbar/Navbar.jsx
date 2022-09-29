@@ -13,6 +13,8 @@ export default function Navbar() {
         <div className={styles.socialMediaContainer}>
           <a href="">
             <Image src={FacebookLogo} className={styles.logoImg}></Image>
+          </a>
+          <a href="">
             <Image src={InstagramLogo} className={styles.logoImg}></Image>
           </a>
         </div>
@@ -32,6 +34,8 @@ export default function Navbar() {
         <div className={styles.mobileSocialMediaContainer}>
           <a href="">
             <Image src={FacebookLogo} className={styles.logoImg}></Image>
+          </a>
+          <a href="">
             <Image src={InstagramLogo} className={styles.logoImg}></Image>
           </a>
         </div>
