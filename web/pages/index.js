@@ -49,33 +49,28 @@ export default function Home({
 
 export const getServerSideProps = async () => {
   const newsQuery = '*[_type == "news"]';
-  const newsData = await client.fetch(newsQuery);
   const offerQuery = '*[_type == "offer"]';
-  const offerData = await client.fetch(offerQuery);
   const nextEventQuery = '*[_type == "events" && date >= now()] | order(date)';
-  const nextEventData = await client.fetch(nextEventQuery);
   const authorRecommendationQuery =
     '*[_type == "authorRecommendation"] | order(date)';
-  const authorRecommendationData = await client.fetch(
-    authorRecommendationQuery
-  );
   const bookRecommendationQuery =
     '*[_type == "BookRecommendation"] | order(createdAt desc)';
-  const bookRecommendationData = await client.fetch(bookRecommendationQuery);
   const infoQuery = '*[_type == "findUs"]';
-  const infoData = await client.fetch(infoQuery);
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(url);
-  const instaFeed = await data.json();
+  const instadata = await fetch(url);
+  const instaFeed = await instadata.json();
 
+  const data = await client.fetch(`{
+  "newsData": ${newsQuery},
+  "offerData": ${offerQuery},
+  "nextEventData": ${nextEventQuery},
+  "authorRecommendationData": ${authorRecommendationQuery},
+  "bookRecommendationData": ${bookRecommendationQuery},
+  "infoData": ${infoQuery},
+}`);
   return {
     props: {
-      newsData,
-      offerData,
-      nextEventData,
-      authorRecommendationData,
-      bookRecommendationData,
-      infoData,
+      ...data,
       instaFeed,
     },
   };
