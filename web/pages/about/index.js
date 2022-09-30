@@ -11,7 +11,7 @@ export default function Home({ infoData }) {
       <Navbar />
       <AboutUsAbout />
       <TheStoreAbout />
-      <FindUsAbout />
+      <FindUsAbout info={infoData[0]} />
       <Footer color="#edba88" info={infoData[0]} />
     </>
   );

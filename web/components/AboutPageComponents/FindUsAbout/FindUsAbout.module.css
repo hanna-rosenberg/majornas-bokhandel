@@ -21,6 +21,10 @@
   background-color: white;
   grid-column: 2 / 5;
   grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .topRight {
@@ -82,12 +86,55 @@
   background: url(../../../assets/texture.png);
   background-size: cover;
 }
+.header h3 {
+  font-size: 30px;
+  line-height: 10px;
+}
+.adress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+}
+.infoBox {
+  width: 305px;
+  font-family: TypewriterRegular;
+}
+.adress h3 {
+  font-size: 30px;
+  margin-top: 24px;
+}
+.adress p {
+  font-size: 24x;
+  line-height: 6px;
+  font-family: TypewriterRegular;
+  font-weight: 600;
+}
 @media only screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 97px 1fr 22px 1fr 97px;
     grid-template-rows: 39px 22px 269px 22px;
     gap: 2px;
     padding: 0 2px 2px 2px;
+  }
+  /*NOT GRID*/
+  .infoBox {
+    width: 169px;
+  }
+  .header h3 {
+    font-size: 18px;
+    line-height: 10px;
+  }
+  .adress h3 {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .infoBox p {
+    font-size: 14px;
+    line-height: 4px;
+    font-family: TypewriterRegular;
+    font-weight: 600;
   }
 }
 
@@ -155,5 +202,19 @@
 
   .bottomRight {
     display: none;
+  }
+
+  /*NOT GRID*/
+  .infoBox {
+    width: 169px;
+  }
+  .adress h3 {
+    margin-top: 14px;
+    line-height: 12px;
+  }
+  .infoBox p {
+    font-size: 12px;
+    font-family: TypewriterRegular;
+    font-weight: 600;
   }
 }
