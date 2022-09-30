@@ -22,20 +22,23 @@ export default function Home({
   authorRecommendationData,
   bookRecommendationData,
   infoData,
+  instaFeed,
 }) {
   return (
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
+      <NewsAndOffers
+        news={newsData[0].news}
+        offer={offerData[0].offer}
+      ></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
       <FindUs info={infoData[0]} />
       <AuthorOfTheMonth authorRecommendation={authorRecommendationData[0]} />
       <ReadingTips bookRecommendation={bookRecommendationData} />
-
-      <Instagram />
+      <Instagram insta={instaFeed} />
       <Footer color="#3f3f3f" info={infoData[0]} />
     </>
   );
@@ -51,14 +54,19 @@ export const getServerSideProps = async () => {
   const offerData = await client.fetch(offerQuery);
   const nextEventQuery = '*[_type == "events" && date >= now()] | order(date)';
   const nextEventData = await client.fetch(nextEventQuery);
-
-  const authorRecommendationQuery = '*[_type == "authorRecommendation"] | order(date)';
-  const authorRecommendationData = await client.fetch(authorRecommendationQuery);
-  const bookRecommendationQuery = '*[_type == "BookRecommendation"] | order(createdAt desc)';
+  const authorRecommendationQuery =
+    '*[_type == "authorRecommendation"] | order(date)';
+  const authorRecommendationData = await client.fetch(
+    authorRecommendationQuery
+  );
+  const bookRecommendationQuery =
+    '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const bookRecommendationData = await client.fetch(bookRecommendationQuery);
-
   const infoQuery = '*[_type == "findUs"]';
   const infoData = await client.fetch(infoQuery);
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
+  const data = await fetch(url);
+  const instaFeed = await data.json();
 
   return {
     props: {
@@ -67,8 +75,8 @@ export const getServerSideProps = async () => {
       nextEventData,
       authorRecommendationData,
       bookRecommendationData,
-
       infoData,
+      instaFeed,
     },
   };
 };
