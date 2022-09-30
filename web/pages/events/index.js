@@ -20,19 +20,19 @@ export default function Home({ infoData, nextEventData, previousEventData }) {
 }
 export const getServerSideProps = async () => {
   const infoQuery = '*[_type == "findUs"]';
-  const infoData = await client.fetch(infoQuery);
-
   const nextEventQuery = '*[_type == "events" && date >= now()] | order(date)';
-  const nextEventData = await client.fetch(nextEventQuery);
+  const previousEventQuery =
+    '*[_type == "events" && date < now()] | order(date)';
 
-  const previousEventQuery = '*[_type == "events" && date < now()] | order(date)';
-  const previousEventData = await client.fetch(previousEventQuery);
+  const data = await client.fetch(`{
+    "nextEventData": ${nextEventQuery},
+    "previousEventData": ${previousEventQuery},
+    "infoData": ${infoQuery},
+  }`);
 
   return {
     props: {
-      infoData,
-      nextEventData,
-      previousEventData,
+      ...data,
     },
   };
 };
