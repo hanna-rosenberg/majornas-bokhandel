@@ -4,7 +4,6 @@ import { urlFor } from "../../../studio/lib/client";
 import Link from "next/link";
 
 export default function UpcommingEvents({ upcoming }) {
-  console.log(upcoming[0].image);
   return (
     <div className={styles.container}>
       <div className={styles.left}></div>

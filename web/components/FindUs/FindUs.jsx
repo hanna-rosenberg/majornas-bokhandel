@@ -26,7 +26,6 @@ export default function FindUs({ info }) {
           </div>
         </div>
         <div className={styles.map}>
-          {console.log(info)}
           <GoogleMaps />
         </div>
         <div className={styles.mobileMiddleEdgeLeft}></div>

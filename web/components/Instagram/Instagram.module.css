@@ -17,6 +17,11 @@
   background-color: white;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  font-family: TypewriterBold;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topRight {
@@ -35,12 +40,26 @@
   background-color: white;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 55px 0 55px;
 }
 
 .right {
   background-color: #edba88;
   grid-column: 3 / 4;
   grid-row: 2 / 3;
+}
+
+.images {
+  padding: 20px 5px;
+  max-width: 325px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -50,6 +69,16 @@
     gap: 2px;
     padding: 0 2px 2px 2px;
   }
+  .header {
+    font-size: 18px;
+  }
+  .content {
+    padding: 20px 40px 20px 40px;
+  }
+  .images {
+    padding: 15px 5px;
+    max-width: 220px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -58,5 +87,14 @@
     grid-template-rows: 38px 1fr;
     gap: 1px;
     padding: 0 1px 1px 1px;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .images {
+    padding: 10px 0;
+    max-width: 320px;
   }
 }
