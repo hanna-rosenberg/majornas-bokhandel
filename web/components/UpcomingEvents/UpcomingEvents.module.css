@@ -1,10 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 1fr clamp(
-      140px,
-      12vw,
-      207px
-    );
+  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 1fr clamp(140px, 12vw, 207px);
   grid-template-rows: 48px 108px 1fr 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
@@ -355,5 +351,30 @@
   /* NOT grid */
   .upcoming h2 {
     font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    grid-template-columns: 16px 1fr 1fr 16px;
+    grid-template-rows: 24px 354px 24px 1fr 24px;
+    gap: 1px;
+    padding: 0 1px 1px 1px;
+  }
+
+  .information {
+    padding: 0;
+  }
+
+  .information h4 {
+    font-size: clamp(12px, 6vw, 18px);
+  }
+
+  .information h2 {
+    padding: 0;
+  }
+
+  .information p {
+    margin: 0;
   }
 }

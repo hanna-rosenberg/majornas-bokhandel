@@ -28,10 +28,7 @@ export default function Home({
     <>
       <Navbar />
       <Welcome />
-      <NewsAndOffers
-        news={newsData[0].news}
-        offer={offerData[0].offer}
-      ></NewsAndOffers>
+      <NewsAndOffers news={newsData[0].news} offer={offerData[0].offer}></NewsAndOffers>
       <AboutEvents />
       <NextEvent events={nextEventData[0]} />
       <UpcomingEvents upcoming={nextEventData} />
@@ -51,10 +48,8 @@ export const getServerSideProps = async () => {
   const newsQuery = '*[_type == "news"]';
   const offerQuery = '*[_type == "offer"]';
   const nextEventQuery = '*[_type == "events" && date >= now()] | order(date)';
-  const authorRecommendationQuery =
-    '*[_type == "authorRecommendation"] | order(date)';
-  const bookRecommendationQuery =
-    '*[_type == "BookRecommendation"] | order(createdAt desc)';
+  const authorRecommendationQuery = '*[_type == "authorRecommendation"] | order(date)';
+  const bookRecommendationQuery = '*[_type == "BookRecommendation"] | order(createdAt desc)';
   const infoQuery = '*[_type == "findUs"]';
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
   const instadata = await fetch(url);
