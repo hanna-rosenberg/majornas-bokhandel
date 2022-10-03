@@ -1,6 +1,10 @@
 .container {
   display: grid;
-  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 32px 1fr clamp(140px, 12vw, 207px);
+  grid-template-columns: clamp(140px, 12vw, 207px) 1fr 32px 1fr clamp(
+      140px,
+      12vw,
+      207px
+    );
   grid-template-rows: 65px 48px 1fr 165px 48px 163px 48px;
   gap: 3px;
   padding: 0 3px 3px 3px;
@@ -179,7 +183,7 @@
 @media only screen and (max-width: 768px) {
   .container {
     grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-rows: 38px 24px 1fr 101px 24px 317px 101px 24px;
+    grid-template-rows: 38px 24px 1fr 101px 24px 1fr 101px 24px;
     gap: 1px;
     padding: 0 1px 1px 1px;
   }
